@@ -10,7 +10,7 @@ public:
 	PixelShader psWhite_load;
 
 	void first() {
-
+		
 		psWhite_load = HLSL{ U"shader/white.hlsl", U"PS" };
 		if (not psWhite_load)
 		{

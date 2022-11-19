@@ -1,5 +1,7 @@
 ﻿#pragma once
 
+#include<Siv3D.hpp>
+
 #include"White_Effect.hpp"
 
 class Enemy {
@@ -13,17 +15,8 @@ public:
 
 
 	void draw();
+
+	//siv3dが使えるかテスト用
+	Rect rect = Rect(100, 100, 100, 100);
 };
 
-void Enemy::draw() {
-
-	cb->strength = 1;
-
-	{
-		Graphics2D::SetPSConstantBuffer(1, cb);
-
-		const ScopedCustomShader2D shader(psWhite);
-
-		TextureAsset(U"enemy_image").draw(100, 100);
-	}
-}

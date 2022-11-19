@@ -8,6 +8,8 @@ void Main()
 
 	game.first();
 
+	game.enemy.push_back(Enemy());
+
 	while (System::Update())
 	{
 		game.update();
